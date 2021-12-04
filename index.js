@@ -2,7 +2,7 @@ const path = require("path");
 const { IO } = require("./io");
 const io = new IO();
 
-const MVS = ([, , type, name]) => {
+const MVC = ([, , type, name]) => {
   if (type === "mvc-express") {
     //   FOLDERS
     io.createFolder(path.join(__dirname, `../${name}`));
@@ -170,4 +170,4 @@ const MVS = ([, , type, name]) => {
   }
   console.log(type);
 };
-MVS(process.argv);
+MVC(process.argv);
